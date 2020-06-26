@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/img/favicon.png" sizes="32x32">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="assets/css/foundation.min.css">
+    <link rel="stylesheet" href="assets/css/motion-ui.min.css"/>
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Team</title>
+</head>
+
+
+<body>
+<header>
+    <div class="row">
+        <div class="large-3 medium-4 columns">
+            <a href="index.html"><img src="assets/img/logo.png" alt="logo jack designer" class="logo"></a>
+        </div>
+        <div class="large-9 medium-8 columns text-center">
+            <div data-responsive-toggle="menu" data-hide-for="medium" class="top-bar-right">
+                <button class="menu-icon" type="button" data-toggle></button>
+            </div>
+
+            <div id="menu">
+                <nav class="top-bar-right">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                        <li><a href="index.html">Home</a></li>
+                        <!--                        <li><a href="#">About</a></li>-->
+                        <!--                        <li><a href="#">Portfolio</a></li>-->
+                        <!--                        <li><a href="#">Packages</a></li>-->
+                        <li><a href="team.html" class="active">Team</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<main>
+    <div id="main-title">
+        <div class="row">
+            <div class="large-5 column">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+            <div class="large-2 column">
+                <h1>Our Team</h1>
+            </div>
+            <div class="large-5 column">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 column">
+                <h3>Our team of development and creative professionals combine their respective talents to offer clients
+                    a collective, cutting-edge design and superior service, regardless of the size of the project.</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <table class="table-responsive">
+            <thead>
+            <tr>
+                <th>Picture</th>
+                <th>Name</th>
+                <th class="table-job">Job</th>
+                <th>About</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><img src="assets/img/pixxadolz.jpg" alt="Pixxadolz Picture"></td>
+                <td>Pixxadolz</td>
+                <td>Graphic Designer</td>
+                <td>Very creative and multi-talented, it is with pleasure that I would accompany you in your project.
+                </td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/j4ck.png" alt="J4ck Picture"></td>
+                <td>J4ck</td>
+                <td>Illustrator</td>
+                <td>My name is J4ck, I love to draw, illustrate bullshit and especially little puppies.</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/sorrow.png" alt="Sorrow Picture"></td>
+                <td>Sorrow</td>
+                <td>Developer</td>
+                <td>It's ME Mario !</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+
+<footer>
+    <div class="row">
+        <div class="small-7 large-7 columns">
+            <img src="assets/img/logo-footer.png" alt="logo jack designer" class="logo float-left">
+            <p>- All right reserved by sanjuant.fr</p>
+        </div>
+        <div class="columns small-text-right small-4 small-offset-1 large-4">
+            <p>Social Networks: <a href="#">
+                <img src="assets/img/facebook-button.png" alt=" "/>
+            </a> <a href="#">
+                <img src="assets/img/twitter-button.png" alt=" "/>
+            </a> <a href="#">
+                <img src="assets/img/linkedin-button.png" alt=" "/>
+            </a> <a href="#"></a></p>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="assets/js/foundation.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(document).foundation();
+    });
+
+    document.querySelectorAll('.table-responsive').forEach(function (table) {
+        let labels = Array.from(table.querySelectorAll('th')).map(function (th) {
+            return th.innerText
+        })
+        table.querySelectorAll('td').forEach(function (td, i) {
+            td.setAttribute('data-label', labels[i % labels.length])
+        })
+    })
+</script>
+</body>
+</html>

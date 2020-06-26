@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/img/favicon.png" sizes="32x32">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="assets/css/foundation.min.css">
+    <link rel="stylesheet" href="assets/css/motion-ui.min.css"/>
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Contact Us</title>
+</head>
+
+
+<body>
+<header>
+    <div class="row">
+        <div class="large-3 medium-4 columns">
+            <a href="index.html"><img src="assets/img/logo.png" alt="logo jack designer" class="logo"></a>
+        </div>
+        <div class="large-9 medium-8 columns text-center">
+            <div data-responsive-toggle="menu" data-hide-for="medium" class="top-bar-right">
+                <button class="menu-icon" type="button" data-toggle></button>
+            </div>
+
+            <div id="menu">
+                <nav class="top-bar-right">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                        <li><a href="index.html">Home</a></li>
+<!--                        <li><a href="#">About</a></li>-->
+<!--                        <li><a href="#">Portfolio</a></li>-->
+<!--                        <li><a href="#">Packages</a></li>-->
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html" class="active">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<main>
+    <div id="main-title">
+        <div class="row">
+            <div class="large-4.5 column">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+            <div class="large-3 column">
+                <h1>Contact Us</h1>
+            </div>
+            <div class="large-4.5 column">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 column">
+                <h3>Have a question about our website? Contact us 24 hours a day 7 days a week for the best customer
+                    service!</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <form id="contact">
+            <div class="row fullname">
+                <div class="small-12 column">
+                    <label for="for_firstname" class="form-label">Firstname
+                        <input id="for_firstname" type="text" class="form-input" placeholder="John">
+                    </label>
+                </div>
+                <div class="small-12 column">
+                    <label for="for_lastname" class="form-label">Lastname
+                        <input id="for_lastname" type="text" class="form-input" placeholder="Doe">
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="for_email" class="form-label">Email
+                        <input id="for_email" type="email" class="form-input" placeholder="john.doe@mail.com" required>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="for_message" class="form-label">Message
+                        <textarea id="for_message" class="form-textarea" rows="3"></textarea>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="form-label">You are</div>
+                    <input type="radio" name="type" value="Individual Person" id="for_individual" required><label
+                        for="for_individual" class="form-input">Individual Person</label>
+                    <input type="radio" name="type" value="Enterprise" id="for_enterprise"><label for="for_enterprise"
+                                                                                                  class="form-input">Enterprise</label>
+                </div>
+            </div>
+            <div class="row wrap">
+                <div class="medium-10 small-12 column checkbox-stack">
+                    <input id="commercial-purpose" type="checkbox"><label for="commercial-purpose"
+                                                                          class="form-label form-label_commercial-purpose">I
+                    agree to share my email for commercial purposes</label>
+                </div>
+                <div class="medium-2 small-12 column">
+                    <button type="submit" id="submit-contact" class="secondary button small expanded float-right">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+
+
+<footer>
+    <div class="row">
+        <div class="small-7 large-7 columns">
+            <img src="assets/img/logo-footer.png" alt="logo jack designer" class="logo float-left">
+            <p>- All right reserved by sanjuant.fr</p>
+        </div>
+        <div class="columns small-text-right small-4 small-offset-1 large-4">
+            <p>Social Networks: <a href="#">
+                <img src="assets/img/facebook-button.png" alt=" "/>
+            </a> <a href="#">
+                <img src="assets/img/twitter-button.png" alt=" "/>
+            </a> <a href="#">
+                <img src="assets/img/linkedin-button.png" alt=" "/>
+            </a> <a href="#"></a></p>
+        </div>
+    </div>
+</footer>
+
+<div class="reveal" id="modal" data-reveal>
+    <h1>Sorry</h1>
+    <h2>Servers are currently undergoing maintenance.</h2>
+    <p>While waiting for our servers to come back online, please look around twitter community, or read up on our current promotions and activities! We appreciate your patience and understanding. Thank you.</p>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="assets/js/foundation.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(document).foundation();
+    });
+
+    // Open modal when submit form
+    let submitContact = document.getElementById("submit-contact");
+    submitContact.addEventListener("click", function (e) {
+        let email = document.getElementById("for_email");
+        let commercialPurpose = document.getElementById("commercial-purpose");
+        if (email.checkValidity() && commercialPurpose.checkValidity()) {
+            e.preventDefault();
+            $('#modal').foundation('open');
+        }
+    })
+</script>
+</body>
+</html>
